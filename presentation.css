@@ -16,3 +16,7 @@ h1, h3 {
 p {
     line-height: 1.5rem;
 }
+
+a {
+    color: hotpink;
+}
