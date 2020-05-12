@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    margin: 1rem 0;
+}
+
+p, ul li {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+:root {
+  --grey: #707070;
+  --red: #ff0000;
+  --orange: #f05e23;
+  --blue: #0071bc;
+  --green: #29af44;
+}
+
+#sidebar {
+    width: 200px;
+    margin: auto;
+    margin-top: 40px;
+    height: 486px;
+}
+
+.side {
+    margin: 0 1rem;
+    border-top: 1px solid var(--grey);
+    transition: 0.3s ease-out;
+}
+
+ul {
+    margin: 0 0 1rem 0;
+    max-height: 400px;
+    transition: max-height 0.3s ease-in;
+    transition: opacity 0.2s ease-in;
+}
+
+ul li {
+    list-style-type: none;
+    line-height: 1.5rem;
+    color: var(--grey);
+}
+
+ul li:hover {
+    color: var(--blue);
+}
+
+.side ul {
+    padding-left: 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    background-image: url(toggleicon.svg);
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    border: none;
+    transition: 0.05s linear all;
+    padding: 0;
+}
+
+button:focus {
+    outline-style: none;
+    box-shadow: 0 0 4px var(--blue);
+}
+
+.hide {
+    max-height: 0 !important;
+    transition: max-height 0.3s ease-in;
+    transition: opacity 0.01s ease-out;
+    opacity: 0 !important;
+    margin: 0 !important;
+    pointer-events: none;
+}
+
+.rotated{
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+  transition: 0.05s linear all;
+}
+
+#desc {
+    width: 700px;
+    max-width: 90%;
+    padding: 20px 0;
+    margin: 0 auto;
+
+}
+
+#colorblock {
+    background-color: darkblue;
+    margin: 40px 0 0;
+    color: white;
+    bottom: 0px;
+    width: 100%;
+}
+
+#desc b {
+    font-family: 'Raleway';
+    color:plum;
+}
+
+@media screen and (min-width: 650px) and (min-height: 940px) {
+    #colorblock {
+        position: fixed;
+    }
+}
