@@ -1,9 +1,9 @@
 window.onload = function()
 {
-   console.log('loaded');
    window.onscroll = function()
    {
        stickynav();
+//       stickyfilters();
    }
 }
 
@@ -11,7 +11,12 @@ window.onload = function()
 const topbar = document.getElementById('topbar');
 
 //offset position of topbar
-var offset = topbar.offsetTop;
+let offset = topbar.offsetTop;
+
+//filters list
+const filters = document.getElementById('filters');
+
+let filteroffset = filters.offsetTop;
 
 //make the nav bar sticky
 function stickynav() {    
@@ -21,4 +26,13 @@ function stickynav() {
     else {
         topbar.classList.remove('sticky');
     }
-} 
+}
+
+//function stickyfilters() {
+//    if (window.pageYOffset >= filteroffset) {
+//        filters.classList.add('stickyfilters');
+//    }
+//    else {
+//        filters.classList.remove('stickyfilters');
+//    }
+//}
