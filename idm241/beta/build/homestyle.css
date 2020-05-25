@@ -1,0 +1,287 @@
+/*general*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+  --grey: #707070;
+  --red: #ff0000;
+  --orange: #f05e23;
+  --blue: #0071bc;
+  --green: #29af44;
+}
+
+/*text styling*/
+
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+h3, h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+p, ul li {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+a {
+    color: var(--grey);
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+input {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 6rem;
+    margin: 0 0 1rem 0;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+h3, h4 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    margin: 0 0 1rem 0;
+}
+
+h4 {
+    margin: 0 0 0.75rem 0;
+}
+
+/*hero*/
+
+h1, h2 {
+    text-align: center;
+}
+
+#hero {
+    background-image: url(img/fruithero.jpg);
+    padding: 5rem 0;
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*topbar*/
+
+#topbar {
+    background-color: white;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3rem 0;
+    -webkit-box-shadow: 0 8px 6px -6px var(--grey);
+    -moz-box-shadow: 0 8px 6px -6px var(--grey);
+    box-shadow: 0 5px 6px -6px var(--grey);
+}
+
+#topbar img {
+    width: 24px;
+}
+
+topbar button {
+    width: 24px;
+}
+
+/*search*/
+#search {
+    display: flex;
+    align-items: center;
+}
+
+#search img {
+    margin: auto 0 auto 1rem;
+}
+
+#searchbox {
+    border: 1px solid var(--grey);
+    border-radius: 50px;
+    margin: auto 0;
+    padding: 0.25rem 0.5rem;
+}
+
+/*mobile filter icon*/
+
+#filtericon {
+    visibility: hidden;
+}
+
+/*everything between the top bar and footer*/
+
+#mainpage {
+    width: auto;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/*filters*/
+
+#filters {
+    width: 12rem;
+    float: left;
+    margin: 0 3rem 0 0;
+}
+
+.filterlist {
+    margin: 0 0 1rem 0;
+    border-top: 1px solid var(--grey);
+    padding: 2rem 1rem 0 0;
+}
+
+.filterlist ul li {
+    list-style-type: none;
+    line-height: 1.5rem;
+    color: var(--grey);
+}
+
+.filterlist ul li:hover {
+    color: var(--blue);
+}
+
+.filterlist ul {
+    padding:0 0 0 1rem;
+    margin: 0 0 1rem 0;
+}
+
+/*recipes main*/
+#recipes {
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    column-gap: 3rem;
+}
+
+.card {
+    width: 300px;
+    margin: 0 0 3rem 0;
+    padding: 0;
+}
+
+.card img {
+    width: 100%;
+}
+
+#recipes p {
+    margin: 0;
+}
+
+/*footer*/
+
+#footer {
+    height: 3rem;
+    padding-right: 5%;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    background-color: var(--green);
+}
+
+#footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: black;
+}
+
+/*special class to make things sticky*/
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+/*keep the sticky effect from getting jumpy*/
+
+.sticky + .mainpage {
+    padding-top: 7.5rem;
+}
+
+/*rEsPoNsIvE*/
+
+@media screen and (max-width: 1300px) {
+    #recipes {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    #filters {
+        float: none;
+        display: none;
+    }
+    #filtericon {
+        visibility: visible;
+    }
+    .filterlist {
+        margin: auto;
+        border-top: none;
+    }
+}
+
+@media screen and (min-width: 941px) {
+    #filtericon {
+        visibility: hidden;
+    }
+    #filters {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #recipes {
+        grid-template-columns: auto;
+        grid-gap: 0;
+    }
+    .card {
+        width: 100%;
+    }
+    .card img {
+        width: 100%;
+    }
+    #footer {
+        justify-content: center;
+    }
+    #mainpage {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    h1 {
+        margin-bottom: 0;
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    #hero {
+        min-height: 100px;
+        padding: 2.5rem 0;
+    }
+}
