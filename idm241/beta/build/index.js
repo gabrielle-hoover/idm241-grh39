@@ -1,10 +1,11 @@
 window.onload = function()
 {
-   window.onscroll = function()
-   {
+    filterIcon.addEventListener("click", togglenav, false);
+    window.onscroll = function()
+    {
        stickynav();
-//       stickyfilters();
-   }
+       stickyfilters();
+    }
 }
 
 //the topbar itself
@@ -16,7 +17,8 @@ let offset = topbar.offsetTop;
 //filters list
 const filters = document.getElementById('filters');
 
-let filteroffset = filters.offsetTop;
+//filter icon on mobile
+var filterIcon = document.getElementById("filtericon");
 
 //make the nav bar sticky
 function stickynav() {    
@@ -28,11 +30,22 @@ function stickynav() {
     }
 }
 
-//function stickyfilters() {
-//    if (window.pageYOffset >= filteroffset) {
-//        filters.classList.add('stickyfilters');
-//    }
-//    else {
-//        filters.classList.remove('stickyfilters');
-//    }
-//}
+//make the filters bar sticky
+function stickyfilters() {
+    if (window.pageYOffset >= offset) {
+        filters.classList.add('stickyfilters');
+    }
+    else {
+        filters.classList.remove('stickyfilters');
+    }
+}
+
+//toggle mobile menu visibility
+function togglenav(){
+   if (filters.style.display === 'none') {
+       filters.style.display='block';
+   }
+   else {
+       filters.style.display='none';
+   }
+}

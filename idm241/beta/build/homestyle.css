@@ -95,6 +95,7 @@ h1, h2 {
     -webkit-box-shadow: 0 8px 6px -6px var(--grey);
     -moz-box-shadow: 0 8px 6px -6px var(--grey);
     box-shadow: 0 5px 6px -6px var(--grey);
+    z-index: 2000;
 }
 
 #topbar img {
@@ -136,10 +137,11 @@ h1, h2 {
 /*everything between the top bar and footer*/
 
 #mainpage {
-    width: auto;
-    width: 90%;
+    width: 95%;
     max-width: 1500px;
     margin: 3rem auto 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 /*filters*/
@@ -169,6 +171,15 @@ h1, h2 {
 .filterlist ul {
     padding:0 0 0 1rem;
     margin: 0 0 1rem 0;
+    max-height: 400px;
+    transition: max-height 0.3s ease-in;
+    transition: opacity 0.2s ease-in;
+}
+
+/*wrapper to make filters sticky with absolute position*/
+#filterswrapper {
+    min-width: 240px;
+    min-height: 550px;
 }
 
 /*recipes main*/
@@ -177,8 +188,8 @@ h1, h2 {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
-    margin: 0;
     padding: 0;
+    margin: 0;
     column-gap: 3rem;
 }
 
@@ -239,6 +250,15 @@ h1, h2 {
     #filters {
         float: none;
         display: none;
+        position: absolute;
+        top: 26rem;
+        z-index: 1000;
+        background-color: aliceblue;
+        width: 100%;
+        padding-bottom: 1.5rem;
+    }
+    #filterswrapper {
+        min-width: 0;
     }
     #filtericon {
         visibility: visible;
@@ -246,6 +266,9 @@ h1, h2 {
     .filterlist {
         margin: auto;
         border-top: none;
+    }
+    #mainpage {
+        justify-content: center;
     }
 }
 
