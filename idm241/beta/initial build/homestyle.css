@@ -119,7 +119,6 @@ h1, h2 {
 
 #search img {
     margin: auto 0 auto 1rem;
-    cursor: grab;
 }
 
 #searchbox {
@@ -133,7 +132,6 @@ h1, h2 {
 
 #filtericon {
     visibility: hidden;
-    cursor: grab;
 }
 
 /*everything between the top bar and footer*/
@@ -143,7 +141,7 @@ h1, h2 {
     max-width: 1500px;
     margin: 3rem auto 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 /*filters*/
@@ -152,7 +150,6 @@ h1, h2 {
     width: 12rem;
     float: left;
     margin: 0 3rem 0 0;
-    display: block;
 }
 
 .filterlist {
@@ -165,7 +162,6 @@ h1, h2 {
     list-style-type: none;
     line-height: 1.5rem;
     color: var(--grey);
-    cursor: grab;
 }
 
 .filterlist ul li:hover {
@@ -186,13 +182,6 @@ h1, h2 {
     min-height: 550px;
 }
 
-/*header class for headers of filters w button & title*/
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 /*recipes main*/
 #recipes {
     width: auto;
@@ -208,7 +197,6 @@ h1, h2 {
     width: 300px;
     margin: 0 0 3rem 0;
     padding: 0;
-    cursor: grab;
 }
 
 .card img {
@@ -248,14 +236,6 @@ h1, h2 {
 .stickyfilters {
   position: fixed;
   top: 8rem;
-}
-
-/*finally, the documentation stuff at the end to make it easier to integrate this code later*/
-
-b {
-    font-family: 'Raleway', sans-serif;
-    color: var(--blue);
-    font-size: 1.25rem;
 }
 
 /*rEsPoNsIvE*/

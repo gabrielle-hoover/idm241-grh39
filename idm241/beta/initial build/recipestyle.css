@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+:root {
+  --grey: #707070;
+  --red: #ff0000;
+  --orange: #f05e23;
+  --blue: #0071bc;
+  --green: #29af44;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#all {
+    margin: 5%;
+}
+
+#topnav a {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    color: var(--orange);
+    margin: 0 0 1rem;
+}
+
+h6, p, ul li, a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h6 {
+    font-size: 0.75rem;
+    color: var(--grey);
+    margin-top: 0;
+}
+
+a {
+    color: black;
+}
+
+hr {
+    margin: 3% 0;
+}
+
+p, ul li {
+    line-height: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/*topnav*/
+#topnav {
+    -webkit-box-shadow: 0 8px 6px -6px var(--grey);
+    -moz-box-shadow: 0 8px 6px -6px var(--grey);
+    box-shadow: 0 5px 6px -6px var(--grey);
+    padding: 1vw 0;
+}
+
+#topnav a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 0;
+    color: var(--blue);
+    text-shadow: 2px 2px var(--orange);
+    text-align: left;
+    padding-left: 3rem;
+}
+
+/*landing*/
+
+#landing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#landing a {
+    display: flex;
+    align-items: flex-end;
+}
+
+#landing a img {
+    width: 24px;
+    margin-right: 1rem;
+}
+
+#landing img {
+    width: 45%;
+}
+
+#landing .sidetext {
+    width: 45%;
+    float: left;
+}
+
+/*ingredients*/
+#ingredients {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;   
+}
+
+#ingredients .sidetext {
+    width: 60%;
+    float: left;
+}
+
+
+#ingredients img {
+    width: 100%
+}
+
+#ingredients ul li {
+    list-style-type: none;
+    color: var(--green);
+    text-indent: -1.5rem;
+}
+
+#ingredients ul {
+    width: 35%;
+    margin: 3rem 0 0;
+    padding: 0 0 0 1.5rem;
+}
+
+#ingredients .ing_amt {
+    margin-right: 1rem;
+    color: var(--grey);
+}
+
+/*instructions*/
+#instructions {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 5%
+}
+
+#instructions .ing_amt {
+    margin-right: 1rem;
+    color: white;
+    width: 32px;
+    height: 32px;
+    background-color: var(--green);
+    border-radius: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.inst img{
+    width: 100%;
+}
+
+.inst {
+    margin-bottom: 3rem;
+}
+
+/*Footer*/
+#footer {
+    height: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    background-color: var(--green);
+}
+
+#footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: black;
+}
+
+@media screen and (min-width: 1100px) {
+    #all {
+        width: 1000px;
+        margin: 5% auto 0;
+    }
+    #center {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    #footer {
+        text-align: end;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    #instructions {
+        grid-template-columns: auto;
+        width: 600px;
+        margin: auto;
+    }
+    #landing img {
+        width: 30%;
+    }
+    #landing .sidetext {
+        width: 60%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #landing {
+        flex-direction: column-reverse;
+    }
+    #landing .sidetext, #landing img {
+        width: 100%;
+    }
+    #landing h1 {
+        margin-top: 5%;
+    }
+    #ingredients {
+        display: block;
+    }
+    #ingredients .sidetext {
+        width: 100%
+    }
+    #ingredients ul {
+        width: 100%;
+    }
+    #instructions {
+        grid-template-columns: auto;
+        width: 90%;
+        margin: auto;
+    }
+    #instructions {
+        grid-template-columns: auto;
+        width: 90%;
+        margin: auto;
+    }
+}
