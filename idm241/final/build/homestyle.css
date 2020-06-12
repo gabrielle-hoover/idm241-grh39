@@ -1,0 +1,368 @@
+/*general*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+  --grey: #707070;
+  --red: #ff0000;
+  --orange: #f05e23;
+  --blue: #0071bc;
+  --green: #29c7ac;
+}
+
+/*text styling*/
+
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+h3, h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+p, ul li {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+a {
+    color: var(--grey);
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+input {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 6rem;
+    margin: 0 0 1rem 0;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+h3, h4 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    margin: 0 0 1rem 0;
+}
+
+h4 {
+    margin: 0 0 0.75rem 0;
+}
+
+/*hero*/
+
+h1, h2 {
+    text-align: center;
+    margin: auto;
+}
+
+#hero {
+    background-image: url(img/fruithero.jpg);
+    padding: 5rem 0;
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip:over;
+    height: 300px;
+}
+
+/*topbar*/
+
+#topbar {
+    background-color: white;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3rem 0;
+    -webkit-box-shadow: 0 8px 6px -6px var(--grey);
+    -moz-box-shadow: 0 8px 6px -6px var(--grey);
+    box-shadow: 0 5px 6px -6px var(--grey);
+    z-index: 2000;
+}
+
+#topbar img {
+    width: 24px;
+}
+
+#topbar button {
+    width: 24px;
+}
+
+/*wrapper div to keep the sticky function from jumping*/
+#topwrapper {
+    min-height: 5rem;
+}
+
+/*search*/
+#search {
+    display: flex;
+    align-items: center;
+}
+
+#search img {
+    margin: auto 0 auto 1rem;
+    cursor: grab;
+}
+
+#searchbox {
+    border: 1px solid var(--grey);
+    border-radius: 50px;
+    margin: auto 0;
+    padding: 0.25rem 0.5rem;
+}
+
+/*mobile filter icon*/
+
+#filtericon {
+    visibility: hidden;
+    cursor: grab;
+}
+
+/*everything between the top bar and footer*/
+
+#mainpage {
+    width: 95%;
+    max-width: 1500px;
+    margin: 3rem auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+/*filters*/
+
+#filters {
+    width: 12rem;
+    float: left;
+    margin: 0 3rem 0 0;
+    display: block;
+    max-height: 80vh;
+    overflow: scroll;
+    background-color: white;
+}
+
+.filterlist {
+    margin: 0 0 1rem 0;
+    border-top: 1px solid var(--grey);
+    padding: 2rem 1rem 0 0;
+}
+
+.filterlist ul li {
+    list-style-type: none;
+    line-height: 1.5rem;
+    color: var(--grey);
+    cursor: grab;
+}
+
+.filterlist ul li:hover {
+    color: var(--blue);
+}
+
+.filterlist ul {
+    padding:0 0 0 1rem;
+    margin: 0 0 1rem 0;
+    max-height: 400px;
+    transition: max-height 0.3s ease-in;
+    transition: opacity 0.2s ease-in;
+}
+
+/*wrapper to make filters sticky with absolute position*/
+#filterswrapper {
+    min-width: 240px;
+    min-height: 550px;
+}
+
+/*header class for headers of filters w button & title*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*recipes main*/
+#recipes {
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    column-gap: 3rem;
+}
+
+.card {
+    width: 300px;
+    margin: 0 0 3rem 0;
+    padding: 0;
+    cursor: grab;
+}
+
+.card img {
+    width: 100%;
+}
+
+#recipes p {
+    margin: 0;
+}
+
+/*footer*/
+
+#footer {
+    height: 3rem;
+    padding-right: 5%;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    background-color: var(--green);
+}
+
+#footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: black;
+}
+
+/*special class to make things sticky*/
+.sticky {
+  position: fixed;
+  top: 0 !important;
+}
+
+.stickyfilters {
+  position: fixed !important;
+  top: 8rem !important;
+}
+
+/*finally, the documentation stuff at the end to make it easier to integrate this code later*/
+
+b {
+    font-family: 'Raleway', sans-serif;
+    color: var(--blue);
+    font-size: 1.25rem;
+}
+
+/*rEsPoNsIvE*/
+
+@media screen and (max-width: 1300px) {
+    #recipes {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    #filters {
+        float: none;
+        display: none;
+        position: absolute;
+        top: 377px;
+        left: 0;
+        z-index: 1000;
+        background-color: white;
+        width: 50%;
+        padding-bottom: 0;
+        border: 1px solid var(--green);
+        max-height: 80vh;
+        overflow: scroll;
+    }
+    #filterswrapper {
+        min-width: 0;
+    }
+    #filtericon {
+        visibility: visible;
+    }
+    .filterlist {
+        margin: auto;
+        border-top: none;
+        padding: 0;
+    }
+    .filterlist ul {
+        margin: 0;
+        padding: 0;
+    }
+    .filterlist ul li {
+        padding: 12px 12px 12px 24px;
+        border-top: 1px solid var(--green);
+    }
+    .header{
+        justify-content: center;
+        color: white;
+        background-color: var(--green);
+        padding-top: 1rem;
+    }
+    #mainpage {
+        justify-content: center;
+    }
+    .stickyfilters {
+        top: 76px !important;
+    }
+}
+
+@media screen and (min-width: 941px) {
+    #filtericon {
+        visibility: hidden;
+    }
+    #filters {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #recipes {
+        grid-template-columns: auto;
+        grid-gap: 0;
+    }
+    .card {
+        width: 100%;
+    }
+    .card img {
+        width: 100%;
+    }
+    #footer {
+        justify-content: center;
+    }
+    #mainpage {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    h1 {
+        margin-bottom: 0;
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    #hero {
+        min-height: 100px;
+        padding: 2.5rem 0;
+    }
+}
+
+@media screen and (max-height: 550px) and (min-width: 940px){
+    #filters {
+        position: relative !important;
+    }
+}
