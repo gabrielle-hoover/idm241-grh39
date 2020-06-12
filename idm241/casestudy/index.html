@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Case Study - Gabrielle Hoover</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="presentation.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+    <div id="hero">
+        <h1>Al Dente</h1>
+        <h2>New Recipes Daily</h2>
+    </div>
+    <div id="wrapper">
+    <div id="title">
+        <h1>Case Study for Al Dente</h1>
+        <h2>Designing microinteractions for a functional cookbook website</h2>
+    </div>
+    <div id="overview">
+        <h3>The Overview</h3>
+        <p>alsdkjf</p>
+    </div>
+    <div id="context">
+        <h3>Context and Challenge</h3>
+        <p>During the ten spring term of 2020, I was tasked with designing and developing a functional php website that could display a list of recipes from a SQL database. It was vital that the website have search and filter functions so that the user could find the recipes that matched their needs.
+        </p>
+        <p>For my microinteractions development class, I decided to design and develop a series of microinteractions that would improve the overall experience for the user on the recipe browsing page. </p>
+        <p>The intial layout of the website was designed with material design principles in mind, but lacked the motion and resposivity that helps to draw the user's eye to key features. The filters and navigation sections scrolled off of the page as the user scrolled down, forcing the user to scroll back to the top if they decided to apply search criteria after scrolling down. On screens less than 940px wide, the filters section became a dropdown. The initial implimentation of this dropdown was obstructive and confusing, and not robustly built to handle cases where the filters bar was longer than the page itself. The visual pronouncement of the hero image was weakened as the user scrolled down and the image moved up.</p>
+    </div>
+    <div id="process">
+       <h4>Phase 1: Desktop</h4>
+        <p>I initally designed an interaction to make the filter section and navigation bar sticky on the homepage of the website, and to apply parallax scrolling to the hero image.</p>
+        <p>I had intially wireframed my homepage at three different breakpoints using Adobe XD. Rather than bringing the design in to a more robust prototyping software such as Flinto or InDesign, I decided to use some video editing to turn my wireframes into a prototyping video.</p>
+        <img src="img/parallax.gif" alt="initial design gif">
+        <p>I developed this feature for desktop first, as I beleived that it was important for the timing and positioning to be perfect on a large scale. I used a combination of CSS and javascript to create a sticky feature that would work on all modern browsers.</p>
+        <h4>Phase 2: Responsive Mobile</h4>
+        <div class="float">
+        <img src="img/diagram.jpg">
+        <p>Once I had implimented this feature to my liking on desktop, I added additional CSS to make a dropdown feature for smaller screen widths. It was vital to me that the feature utilize the same html that was present for the desktop version, to avoid unnecessary repetition of code. Because I had only two weeks to make the feature, I started with a looser mockup of how I wanted the dropdown to look.
+        </p>
+        </div>
+        <p>I wanted the same sticky feature to apply to navigation on mobile, so that the dropdown remained directly beneath the navigation bar no matter where the user had scrolled to on the page.</p>
+        <p>During development, I ran into a flaw in my initial design: if the height of the filter bar was greater than the height of the screen, it needed to scroll, and the user still needed to be able to see and scroll on content beneath the filter bar. To fix this, I made the filter bar half of the width of the screen and redesigned the look of the filter bar to fit this new criteria. When the filter bar is longer than the height of the device, it becomes indipendently scrollable.</p>
+        <h4>Phase 3: Final touches for a fully responsive navigation</h4>
+        <p>I tested my implimentation on screen sizes ranging from 310px to 2040px in width, and from 300px t0 1040 pixels in height. It was vital to me that the design worked seamlessly for users as they resized the browser. I added a final condition to my code in cases where the viewport was very wide and short, so that the filters stayed near the top of the page and did not overlap the footer.</p>
+    </div>
+    <div id="solution">
+        <h3>The Final Solution</h3>
+        <p>My final solution is a fully responsive navigation bar and filters section that helps the user see the content that they want to, anywhere on the page. It is implimented in a robust manner that allows for more filters to be added at a later time without breaking design features.</p>
+    </div>
+    </div>
+</body>
+</html>

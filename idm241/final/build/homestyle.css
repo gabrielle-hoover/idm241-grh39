@@ -80,8 +80,10 @@ h1, h2 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     background-clip:over;
     height: 300px;
+    width: 100%;
 }
 
 /*topbar*/
@@ -155,7 +157,6 @@ h1, h2 {
     float: left;
     margin: 0 3rem 0 0;
     display: block;
-    max-height: 80vh;
     overflow: scroll;
     background-color: white;
 }
@@ -282,7 +283,7 @@ b {
         background-color: white;
         width: 50%;
         padding-bottom: 0;
-        border: 1px solid var(--green);
+        border: 1px solid var(--blue);
         max-height: 80vh;
         overflow: scroll;
     }
@@ -303,12 +304,12 @@ b {
     }
     .filterlist ul li {
         padding: 12px 12px 12px 24px;
-        border-top: 1px solid var(--green);
+        border-top: 1px solid var(--blue);
     }
     .header{
         justify-content: center;
         color: white;
-        background-color: var(--green);
+        background-color: var(--blue);
         padding-top: 1rem;
     }
     #mainpage {
@@ -364,5 +365,9 @@ b {
 @media screen and (max-height: 550px) and (min-width: 940px){
     #filters {
         position: relative !important;
+    }
+    .stickyfilters {
+        position: relative !important;
+        top: auto;    
     }
 }
