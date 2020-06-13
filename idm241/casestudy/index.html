@@ -20,24 +20,25 @@
     </div>
     <div id="overview">
         <h3>The Overview</h3>
-        <p>alsdkjf</p>
+        <p>Microinteractions have the power to make or break a user's experience while using an application. I designed and developed a collection of microinteractions to improve the user's experience while browsing recipes on a cookbook website. It was important to me that the interations were <b>useful, subtle,</b> and <b>gave the user more control</b> of their experience.</p>
     </div>
     <div id="context">
         <h3>Context and Challenge</h3>
-        <p>During the ten spring term of 2020, I was tasked with designing and developing a functional php website that could display a list of recipes from a SQL database. It was vital that the website have search and filter functions so that the user could find the recipes that matched their needs.
+        <p>During the ten week spring term of 2020, I was tasked with designing and developing a functional php website that could display a list of recipes from a SQL database. It was vital that the website have search and filter functions so that the user could find the recipes that matched their needs.
         </p>
         <p>For my microinteractions development class, I decided to design and develop a series of microinteractions that would improve the overall experience for the user on the recipe browsing page. </p>
+        <img src="img/initialdt.gif" class="dt">
         <p>The intial layout of the website was designed with material design principles in mind, but lacked the motion and resposivity that helps to draw the user's eye to key features. The filters and navigation sections scrolled off of the page as the user scrolled down, forcing the user to scroll back to the top if they decided to apply search criteria after scrolling down. On screens less than 940px wide, the filters section became a dropdown. The initial implimentation of this dropdown was obstructive and confusing, and not robustly built to handle cases where the filters bar was longer than the page itself. The visual pronouncement of the hero image was weakened as the user scrolled down and the image moved up.</p>
     </div>
     <div id="process">
        <h4>Phase 1: Desktop</h4>
         <p>I initally designed an interaction to make the filter section and navigation bar sticky on the homepage of the website, and to apply parallax scrolling to the hero image.</p>
         <p>I had intially wireframed my homepage at three different breakpoints using Adobe XD. Rather than bringing the design in to a more robust prototyping software such as Flinto or InDesign, I decided to use some video editing to turn my wireframes into a prototyping video.</p>
-        <img src="img/parallax.gif" alt="initial design gif">
+        <img src="img/parallax.gif" alt="initial design gif" class="dt">
         <p>I developed this feature for desktop first, as I beleived that it was important for the timing and positioning to be perfect on a large scale. I used a combination of CSS and javascript to create a sticky feature that would work on all modern browsers.</p>
         <h4>Phase 2: Responsive Mobile</h4>
         <div class="float">
-        <img src="img/diagram.jpg">
+        <img src="img/initialmb.png">
         <p>Once I had implimented this feature to my liking on desktop, I added additional CSS to make a dropdown feature for smaller screen widths. It was vital to me that the feature utilize the same html that was present for the desktop version, to avoid unnecessary repetition of code. Because I had only two weeks to make the feature, I started with a looser mockup of how I wanted the dropdown to look.
         </p>
         </div>
@@ -49,6 +50,14 @@
     <div id="solution">
         <h3>The Final Solution</h3>
         <p>My final solution is a fully responsive navigation bar and filters section that helps the user see the content that they want to, anywhere on the page. It is implimented in a robust manner that allows for more filters to be added at a later time without breaking design features.</p>
+        <h4>Final Mobile Interation</h4>
+        <div id="finalmb">
+        <img src="img/finalmb1.gif" alt="final mobile interaction gif">
+        <img src="img/finalmb1.png" alt="first final mobile interaction static image">
+        <img src="img/finalmb2.png" alt="second final mobile interaction static image">
+        </div>
+        <h4>Screen Capture:</h4>
+        <iframe src="https://player.vimeo.com/video/428688966" width="640" height="364" frameborder="0" allow="autoplay; fullscreen" allowfullscreen id="screencap"></iframe>
     </div>
     </div>
 </body>
